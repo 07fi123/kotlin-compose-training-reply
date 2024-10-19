@@ -139,7 +139,7 @@ fun ReplyHomeScreen(
             ReplyDetailsScreen(
                 replyUiState = replyUiState,
                 isFullScreen = true,
-                onBackButtonClicked = onDetailScreenBackPressed,
+                onBackPressed = onDetailScreenBackPressed,
                 modifier = modifier
             )
         }
