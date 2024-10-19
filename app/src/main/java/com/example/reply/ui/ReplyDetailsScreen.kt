@@ -40,6 +40,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -95,7 +96,7 @@ fun ReplyDetailsScreen(
                     modifier = if (isFullScreen) {
                         Modifier.padding(horizontal = dimensionResource(R.dimen.detail_card_outer_padding_horizontal))
                     } else {
-                        Modifier
+                        Modifier.padding(end = dimensionResource(R.dimen.detail_card_outer_padding_horizontal))
                     }
                 )
             }
@@ -138,7 +139,7 @@ private fun ReplyDetailsScreenTopBar(
         }
     }
 }
-
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ReplyEmailDetailsCard(
     email: Email,
